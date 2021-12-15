@@ -8,8 +8,16 @@ const UserContainer = (props) => {
   if (error) return <div>Failed to load users</div>
   if (!data) return <div>Loading...</div>
 
+  console.log(data)
+  renderUserCards = () => {
+    return this.data.map((user) => {
+      return (<UserCard user={user} key={user.id} />)
+    })
+  }
+
   return (
     <div className="user-container">
+      {this.renderUserCards}
     </div>
   )
 }
