@@ -1,7 +1,7 @@
 const Directory = props => {
   return (
     <>
-      Next.js App
+      Hello
     </>
   )
 }
