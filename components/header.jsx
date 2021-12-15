@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <div className="header">
-
+      <Image src={logo} alt="Red Comic text saying Super Pizza. The last A is a pizza" />
     </div>
   )
 }
