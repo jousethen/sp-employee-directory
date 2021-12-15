@@ -1,4 +1,5 @@
 import useSwr from 'swr'
+import UserCard from './UserCard'
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
 const UserContainer = (props) => {
@@ -8,16 +9,13 @@ const UserContainer = (props) => {
   if (error) return <div>Failed to load users</div>
   if (!data) return <div>Loading...</div>
 
-  console.log(data)
-  renderUserCards = () => {
-    return this.data.map((user) => {
-      return (<UserCard user={user} key={user.id} />)
-    })
-  }
-
   return (
     <div className="user-container">
-      {this.renderUserCards}
+      {data.map(user => (
+        <div key={user.id} className="user-card">
+          <UserCard user={user} />
+        </div>
+      ))}
     </div>
   )
 }
