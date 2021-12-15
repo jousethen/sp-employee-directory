@@ -1,4 +1,4 @@
-const Directory = props => {
+const Home = props => {
   return (
     <>
       Hello
@@ -8,4 +8,4 @@ const Directory = props => {
 
 
 
-export default Directory
+export default Home
