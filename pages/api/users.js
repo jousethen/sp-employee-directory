@@ -1,10 +1,11 @@
 import prisma from '../../lib/prisma'
 
+// GET api/users
+// GET api/users?searchString=[searchString]
 export default async function handle(req, res) {
   const { searchString } = req.query
-  console.log(searchString)
-
   let users;
+  // Determine if there is a searchString. If there is not, bring back all users
   if (searchString) {
     users = await prisma.user.findMany({
       where: {
