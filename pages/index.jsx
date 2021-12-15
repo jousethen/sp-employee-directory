@@ -1,11 +1,13 @@
 import Header from "../components/Header"
 import UserContainer from "../components/userContainer"
+import Layout from "../components/Layout";
 
 const Home = props => {
   return (
     <>
-      <Header />
-      <UserContainer />
+      <Layout>
+        <UserContainer />
+      </Layout>
     </>
   )
 }
