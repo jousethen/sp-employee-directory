@@ -39,13 +39,13 @@ You can also access the REST API of the API server directly. It is running on th
 
 ### `GET`
 
-- `/api/user/:id`: Fetch a single user by its `id`
+- `/api/users/:id`: Fetch a single user by its `id`
 - `/api/users`: Fetch all users
 - `/api/users?searchString={searchString}`: Filter users by `department` or `location`
 
 ### `POST`
 
-- `/api/user`: Create a new user
+- `/api/users`: Create a new user
   - Body:
     - `name: String` (required): User's name
     - `email: String` (required): User's email
