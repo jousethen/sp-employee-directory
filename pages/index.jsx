@@ -3,7 +3,7 @@ const Home = props => {
   return (
     <>
       <Header />
-      Hello
+      <button type="button" className="btn btn-primary">Primary</button>
     </>
   )
 }
