@@ -19,7 +19,7 @@ function doRequest() {
           title: titles[Math.floor(Math.random() * 7)],
           location: locations[Math.floor(Math.random() * 2)],
           age: r.dob.age,
-          picture: r.picture.medium,
+          picture: r.picture.large,
           departmentId: Math.floor(Math.random() * 3) + 1
         })
       });

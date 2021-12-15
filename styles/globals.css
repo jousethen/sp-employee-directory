@@ -1,3 +1,27 @@
 .navbar-brand  {
   text-align: right;
 }
+
+.user-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.user-card {
+  position: relative;
+  width: 200px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
+  background-color: whitesmoke;
+  padding: 5px;
+  text-align: center;
+}
+
+.user-info {
+  font-style: italic;
+}
+
+.user-contact {
+  font-size: 8pt;
+}
