@@ -4,7 +4,7 @@ import prisma from '../../../lib/prisma'
 // Required fields in body: user object 
 export default async function handle(req, res) {
   const { user } = req.body
-  const result = await prisma.post.create({
+  const result = await prisma.user.create({
     data: {
       user
     },
