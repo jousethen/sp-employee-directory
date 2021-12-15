@@ -7,9 +7,13 @@ const Header = () => {
 
 
   return (
-    <div className="header">
-      <Image src={logo} alt="Red Comic text saying Super Pizza. The last A is a pizza" />
-    </div>
+    <nav className="navbar navbar-light bg-light">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="#">
+          <Image src={logo} alt="" width="300" height="50" className="d-inline-block align-text-top" />
+        </a>
+      </div>
+    </nav>
   )
 }
 
