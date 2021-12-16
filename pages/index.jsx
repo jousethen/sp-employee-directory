@@ -1,4 +1,3 @@
-import Header from "../components/Header"
 import UserContainer from "../components/userContainer"
 import Layout from "../components/Layout";
 import React, { useState, useEffect } from 'react'
