@@ -3,7 +3,7 @@ In case we have not met yet, my name is Jouse(Pronounced Jo-sway but I mostly go
 
 1. This is my first project using Next.js and Prisma. 
 
-My reasoning for taking this gamble is, that I wanted to show that I am completely capable of learning new technologies. I would say 90% of my projects up until this point were all in Ruby Rails. Considering most Full-Stack engieers work in Node and React, I wanted to show that I am capable in that regard. 
+My reasoning for taking this gamble is, that I wanted to show that I am completely capable of learning new technologies. I would say 90% of my projects up until this point were all in Ruby Rails. Considering most Full-Stack Engineers work in Node and React, I wanted to show that I am capable in that regard. 
 
 Side Note: Next.js is totally sick. Very impressed with how intuitive it felt.
 
