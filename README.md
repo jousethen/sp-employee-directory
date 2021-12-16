@@ -1,6 +1,6 @@
 ## Getting started
 
-#I made a notes.md file with information on my process.
+###I made a notes.md file with information on my process.
 
 ### 1. install dependencies
 
