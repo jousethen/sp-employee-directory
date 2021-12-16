@@ -1,7 +1,7 @@
 import UserContainer from "../components/userContainer"
 import Layout from "../components/Layout";
 import React, { useState, useEffect } from 'react'
-
+import Link from "next/link";
 const Home = props => {
   const [searchText, setSearchText] = useState('')
   const [endpoint, setEndpoint] = useState('/api/users')
@@ -25,6 +25,10 @@ const Home = props => {
           </input>
           <button className="btn btn-outline-success" type="submit">Search</button>
         </form>
+        <Link href={`/users/create`}>
+          <a><button className="btn btn-outline-success" >Create New User</button></a>
+        </Link>
+
         <UserContainer endpoint={endpoint} />
       </Layout>
     </>
