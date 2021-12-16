@@ -25,13 +25,13 @@ const User = (user) => {
       <h4 >Location: {user.location} </h4>
 
       <Modal handleOnClick={handleOnClick} />
-      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#fireModal">Fire</button>
+      <button type="button" className="btn btn-danger" data-bs-toggle="modal" data-bs-target="#fireModal">Fire</button>
     </div>
   )
 }
 
 export const getServerSideProps = async (context) => {
-  const res = await fetch(`http://localhost:3000/api/users/${context.params.id}`)
+  const res = await fetch(`${process.env.HOST}/api/users/${context.params.id}`)
   const data = await res.json()
   return { props: { ...data } }
 }
