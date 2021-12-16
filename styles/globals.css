@@ -26,6 +26,9 @@
   font-size: 8pt;
 }
 
+.user-department {
+  font-weight: 500;
+}
 .search {
   width: 100%;
 }

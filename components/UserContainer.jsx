@@ -3,8 +3,6 @@ import UserCard from './UserCard'
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
-//Render all of the users as well as a search bar that will update list
-
 const UserContainer = (props) => {
   //use swr hook to get data from our api
   const { data, error } = useSwr(`${props.endpoint}`, fetcher)

@@ -17,7 +17,10 @@ export default async function handle(req, res) {
 // GET /api/user/:id
 async function handleGET(userId, res) {
   const user = await prisma.user.findUnique({
-    where: { id: Number(userId) }
+    where: { id: Number(userId) },
+    include: {
+      department: true
+    }
   })
   res.json(user)
 }

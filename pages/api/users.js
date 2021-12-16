@@ -24,10 +24,17 @@ export default async function handle(req, res) {
           },
         ],
       },
+      include: {
+        department: true
+      }
     })
   }
   else {
-    users = await prisma.user.findMany()
+    users = await prisma.user.findMany({
+      include: {
+        department: true
+      }
+    })
   }
   res.json(users)
 }

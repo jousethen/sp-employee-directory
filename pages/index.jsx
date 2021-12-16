@@ -7,6 +7,7 @@ const Home = props => {
   const [searchText, setSearchText] = useState('')
   const [endpoint, setEndpoint] = useState('/api/users')
 
+  //Pass the endpoint as a prop to the container so it updates when we submit
   const onSubmit = async e => {
     e.preventDefault()
     setEndpoint(`/api/users?searchString=${searchText}`)
