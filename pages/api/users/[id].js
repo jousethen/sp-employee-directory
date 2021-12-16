@@ -6,7 +6,7 @@ export default async function handle(req, res) {
   if (req.method === 'GET') {
     handleGET(userId, res)
   } else if (req.method === 'DELETE') {
-    // handleDELETE(userId, res)
+    handleDELETE(userId, res)
   } else {
     throw new Error(
       `The HTTP ${req.method} method is not supported at this route.`
@@ -21,6 +21,14 @@ async function handleGET(userId, res) {
     include: {
       department: true
     }
+  })
+  res.json(user)
+}
+
+// DELETE /api/users/:id
+async function handleDELETE(userId, res) {
+  const user = await prisma.user.delete({
+    where: { id: Number(userId) },
   })
   res.json(user)
 }

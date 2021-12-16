@@ -1,15 +1,31 @@
 import Image from 'next/image';
-import { useRouter } from 'next/router';
+import Modal from '../../components/Modal';
+import Router from 'next/router'
 
 const User = (user) => {
-  // let user = props.user;
-  console.log(user)
+
+  const handleOnClick = async e => {
+    await fetch(`http://localhost:3000/api/users/${user.id}`, {
+      method: 'DELETE',
+    })
+    await Router.push('/')
+  }
+
   return (
     <div className="user-profile">
       <Image src={user.picture} width="200%" height="200%" />
-      <h4 className="user-name">{user.name}</h4>
-      <p className="user-info">{user.location} {user.title}</p>
-      <p className="user-department">{user.department.name} </p>
+      <hr></hr>
+      <h2>Personal Information</h2>
+      <h4>Name: {user.name} </h4>
+      <h4 >Age: {user.age} </h4>
+      <hr></hr>
+      <h2>Job Information</h2>
+      <h4 >Department: {user.department.name} </h4>
+      <h4 >Title: {user.title} </h4>
+      <h4 >Location: {user.location} </h4>
+
+      <Modal handleOnClick={handleOnClick} />
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#fireModal">Fire</button>
     </div>
   )
 }
