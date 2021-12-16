@@ -7,7 +7,7 @@ const User = (user) => {
 
   //Fire off when the button on the Modal is clicked
   const handleOnClick = async e => {
-    await fetch(`${process.env.HOST}/api/users/${user.id}`, {
+    await fetch(`/api/users/${user.id}`, {
       method: 'DELETE',
     })
     await Router.push('/')

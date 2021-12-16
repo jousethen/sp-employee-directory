@@ -3,12 +3,12 @@ import prisma from '../../lib/prisma'
 // GET api/users
 // GET api/users?searchString=[searchString]
 export default async function handle(req, res) {
+  console.log(res)
   const { searchString } = req.query
-
   if (req.method === 'GET') {
-    handleGET(userId, res)
+    handleGET(searchString, res)
   } else if (req.method === 'POST') {
-    handlePOST(userId, res)
+    handlePOST(res)
   } else {
     throw new Error(
       `The HTTP ${req.method} method is not supported at this route.`
@@ -17,7 +17,7 @@ export default async function handle(req, res) {
 }
 
 // GET /api/users/:id
-async function handleGET(userId, res) {
+async function handleGET(searchString, res) {
   let users;
   // Determine if there is a searchString. If there is not, bring back all users
   if (searchString) {
@@ -55,7 +55,7 @@ async function handleGET(userId, res) {
 
 // POST /api/users
 //Body has to a user object
-async function handlePOST(userId, res) {
+async function handlePOST(res) {
   const { user } = req.body
   const result = await prisma.user.create({
     data: {

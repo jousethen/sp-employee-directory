@@ -2,13 +2,13 @@ import Router from 'next/router'
 import Layout from '../../components/Layout'
 import React, { useState, useEffect } from 'react'
 
-const Create = (user) => {
+const Create = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [title, setTitle] = useState('')
   const [location, setLocation] = useState('')
   const [age, setAge] = useState('')
-  const [department, setDepartment] = useState('')
+  const [department, setDepartment] = useState(5)
 
   const onHandleSubmit = async e => {
     e.preventDefault()
@@ -21,12 +21,12 @@ const Create = (user) => {
         age: age,
         departmentId: department
       }
-      await fetch(`${process.env.HOST}/api/users`, {
+      await fetch(`/api/users/create`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
       })
-      await Router.push(`/`)
+      await Router.push(`/users/create`)
     } catch (error) {
       console.error(error)
     }
