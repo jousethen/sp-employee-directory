@@ -1,4 +1,4 @@
-import UserContainer from "../components/userContainer";
+import UserContainer from "../components/UserContainer";
 import Layout from "../components/Layout";
 import React, { useState, useEffect } from 'react'
 import Link from "next/link";
