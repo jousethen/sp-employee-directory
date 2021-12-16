@@ -24,7 +24,6 @@ const Modal = (props) => {
               onClick={props.handleOnClick}>
               Goodbye
             </button>
-
           </div>
         </div>
       </div>
