@@ -1,14 +1,17 @@
-import Image from 'next/image';
-import { useRouter } from 'next/router';
+import Image from 'next/image'
+import Link from 'next/link'
 
 const UserCard = (props) => {
   let user = props.user;
   return (
     <>
-      <Image src={user.picture} width="100%" height="100%" href={`/users/${user.id}`} />
+      <Link href={`/users/${user.id}`}>
+        <a><Image src={user.picture} width="100px" height="100px" /></a>
+      </Link>
       <h4 className="user-name">{user.name}</h4>
       <p className="user-info">{user.location} {user.title}</p>
       <p className="user-department">{user.department.name} </p>
+
     </>
   )
 }
