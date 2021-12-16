@@ -1,12 +1,31 @@
 import Header from "../components/Header"
 import UserContainer from "../components/userContainer"
 import Layout from "../components/Layout";
+import React, { useState, useEffect } from 'react'
 
 const Home = props => {
+  const [searchText, setSearchText] = useState('')
+  const [endpoint, setEndpoint] = useState('/api/users')
+
+  const onSubmit = async e => {
+    e.preventDefault()
+    setEndpoint(`/api/users?searchString=${searchText}`)
+  }
+
   return (
     <>
       <Layout>
-        <UserContainer />
+        <form className="search"
+          onSubmit={onSubmit}>
+          <input
+            onChange={e => setSearchText(e.target.value)}
+            type="search"
+            aria-label="Search"
+            width="50px">
+          </input>
+          <button className="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <UserContainer endpoint={endpoint} />
       </Layout>
     </>
   )
