@@ -1,9 +1,6 @@
 ## Getting started
 
-### 1. Download example and install dependencies
-
-Download this example:
-
+### 1. install dependencies
 
 Install npm dependencies:
 ```
@@ -26,6 +23,13 @@ npx prisma db seed
 
 
 ### 3. Start the app
+Make sure to create .env file with:
+
+```
+HOSTNAME=localhost
+PORT=3000
+HOST=http://$HOSTNAME:$PORT
+```
 
 ```
 npm run dev
@@ -45,14 +49,13 @@ You can also access the REST API of the API server directly. It is running on th
 
 ### `POST`
 
-- `/api/users`: Create a new user
+- `/api/users/create`: Create a new user
   - Body:
     - `name: String` (required): User's name
     - `email: String` (required): User's email
     - `title: String` (required): User's title
     - `location: String` (required): User's location
     - `age: Integer` (optional): User's age
-    - `picture: String` (optional): User's picture
 - `/api/department`: Create a new user
   - Body:
     - `name: String`: Department Name
