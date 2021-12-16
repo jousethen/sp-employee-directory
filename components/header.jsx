@@ -3,8 +3,6 @@ import { useRouter } from 'next/router'
 import logo from '../public/logo.png'
 
 const Header = () => {
-  const router = useRouter()
-
   return (
     <nav className="navbar navbar-light bg-light">
       <div className="container-fluid">

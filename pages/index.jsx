@@ -25,6 +25,7 @@ const Home = props => {
           </input>
           <button className="btn btn-outline-success" type="submit">Search</button>
         </form>
+
         <Link href={`/users/create`}>
           <a><button className="btn btn-outline-success" >Create New User</button></a>
         </Link>

@@ -10,8 +10,6 @@ const UserContainer = (props) => {
   if (error) return <div>Failed to load users</div>
   if (!data) return <div>Loading...</div>
 
-
-
   return (
     <div className="user-container">
       {data.map(user => (

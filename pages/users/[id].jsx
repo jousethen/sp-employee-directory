@@ -4,7 +4,6 @@ import Router from 'next/router'
 import Layout from '../../components/Layout'
 
 const User = (user) => {
-
   //Fire off when the button on the Modal is clicked
   const handleOnClick = async e => {
     await fetch(`/api/users/${user.id}`, {
@@ -39,4 +38,5 @@ export const getServerSideProps = async (context) => {
   const data = await res.json()
   return { props: { ...data } }
 }
+
 export default User;
